@@ -1,0 +1,24 @@
+alertmanagerFiles:
+  alertmanager.yml: 
+    global:
+      resolve_timeout: 1m
+
+    receivers:
+    - name: 'gmail-notifications'
+      email_configs:
+      - to: jayfoye93@gmail.com 
+        from: jayfoye93@gmail.com # Update your from mail id here
+        smarthost: smtp.gmail.com:587
+        auth_username: jayfoye93@gmail.com # Update your from mail id here
+        auth_identity: jayfoye93@gmail.com # Update your from mail id here
+        auth_password:  owuh loqm zmis pecz  # Update your app-password here
+        send_resolved: true
+        headers:
+          subject: " Prometheus -  Alert  "
+        text: "{{ range .Alerts }} Hi, \n{{ .Annotations.summary }}  \n {{ .Annotations.description }} {{end}} "
+
+    route:
+      group_wait: 10s
+      group_interval: 2m
+      receiver: 'gmail-notifications'
+      repeat_interval: 2m
