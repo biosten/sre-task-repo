@@ -10,12 +10,12 @@ data:
     receivers:
     - name: 'notifications'
       email_configs:
-      - to: jayfoye93@gmail.com
-        from: jayfoye93@gmail.com
+      - to: jayfoyexx@gmail.com
+        from: jayfoyexx@gmail.com
         smarthost: smtp.gmail.com:587
-        auth_username: jayfoye93@gmail.com
-        auth_identity: jayfoye93@gmail.com
-        auth_password: owuh loqm zmis pecz 
+        auth_username: jayfoyexx@gmail.com
+        auth_identity: jayfoyexx@gmail.com
+        auth_password: owuh loqm zmis xxxx 
         send_resolved: true
         headers:
           subject: "Prometheus - Alert"
@@ -24,7 +24,7 @@ data:
       slack_configs:
       - channel: '#upcommerce-devs'
         send_resolved: true
-        api_url: 'https://hooks.slack.com/services/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'
+        api_url: 'https://hooks.slack.com/services/T06SXT3Q9P0/B06T4DE6YLB/xxxxxxxxxxxxxx'
 
     route:
       group_wait: 10s
